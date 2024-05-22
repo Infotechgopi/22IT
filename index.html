@@ -1,1 +1,26 @@
-<h1>hello user</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function creditCardValidation(creditCradNum)
+{
+var regEx = /^4[0-9]{12}(?:[0-9]{3})?$/;
+if(creditCradNum.value.match(regEx))
+{
+alert("This is a valid credit card number, Thanks"); return true;
+}
+else
+{
+alert("Please enter a valid credit card number."); return false;
+}
+}
+</script>
+</head>
+<body>
+<h2>Credit Card Number Validation</h2>
+<form name="form1">
+Credit Number: <input type='text' name='creditCradNum'/></br></br>
+<input type="submit" name="submit" value="Submit" onclick="creditCardValidation(document.form1.creditCradNum)"/>
+</form>
+</body>
+</html>
